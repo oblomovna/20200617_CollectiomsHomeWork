@@ -3,20 +3,19 @@ import java.util.*;
 public class HomeWork {
     public static void main(String[] args) {
         List<Integer> list1 = new ArrayList();
-        List<Integer> list2 = new ArrayList();
+
         list1.add(1);
         list1.add(2);
         list1.add(3);
         list1.add(4);
-        list2.add(5);
-        list2.add(2);
-        list2.add(3);
-        list2.add(8);
+
+        List<Integer> list2 = Arrays.asList(5,2,3,8);
+
 
 
         List<String> names = Arrays.asList("Ivan", "Maria", "Stephan", "John", "Amalia");
         System.out.println("getListWithoutNames");
-        System.out.println(getListWithoutNames(names));
+        System.out.println(getListWithoutNames1(names));
         System.out.println("comparesElements3");
         System.out.println(comparesElements3(list1, list2));
         List<Integer> listNum1 = new ArrayList();
@@ -31,7 +30,7 @@ public class HomeWork {
         System.out.println(getListWithNumbersLowerThenNum7(listNum1, 3));
     }
 
-   public static List<String> getListWithoutNames(List<String>list) {
+   public static List<String> getListWithoutNames1(List<String>list) {
        List<String> names = new ArrayList();
        for (int i = 0; i < list.size(); i++) {
            if (list.get(i).length() != 4) {
@@ -56,9 +55,7 @@ public class HomeWork {
 
         return comparisonResult;
     }
-   /* public static boolean isListCyclicFormOfAnotherList(List<Integer> list1, List<Integer> list2){
 
-    }*/
 
     public static List<Integer> reverseList5(List<Integer> list) {
         Collections.reverse(list);
